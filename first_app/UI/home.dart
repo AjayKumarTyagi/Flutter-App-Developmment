@@ -1,15 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 myapp()
 {
   press1()
   {
-    print("email clicked...");
+    var msg = Fluttertoast.showToast(
+        msg: "Email pressed",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
+    );
+    return msg;
   }
   press2()
   {
-    print("alarm clicked");
+    var msg1 = Fluttertoast.showToast(
+        msg: "Alarm pressed",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
+    );
+    return msg1;
   }
+
   var url = "https://raw.githubusercontent.com/AjayKumarTyagi/Flutter-App-Developmment/master/boscothepug.jpg";
   var myImage = Image.network(url,width: double.infinity, height: double.infinity);
   var myEmailIcon = Icon(Icons.email);
